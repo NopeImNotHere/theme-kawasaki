@@ -22,33 +22,66 @@ end
 # Override default options
 #
 ## Display the local time
-#set -g theme_display_time yes
+set -g theme_display_time yes
 #
 ## Display the user's current group
-#set -g theme_display_group no
+set -g theme_display_group no
 #
 # Display the system hostname
-#set -g theme_display_hostname no
+set -g theme_display_hostname no
 #
 ## Display git branch status
-#set -g theme_display_git no
+set -g theme_display_git yes
 #
 ## Display job count
-#set -g theme_display_jobs no
+set -g theme_display_jobs no
 #
 ## By default job count won't display if there are no jobs
 #set -g theme_display_jobs_always yes
 #
 ## Don't display if the current working directory is readable/writable
-#set -g theme_display_rw no
+set -g theme_display_rw no
 #
 ## Don't display virtualenv
-#set -g theme_display_virtualenv no
+set -g theme_display_virtualenv no
 #
 ## Display the battery
-#set -g theme_display_batt no
-#set -g theme_display_batt_icon no
+set -g theme_display_batt yes
+set -g theme_display_batt_icon no
 #
+## Default Time Format
+set -g theme_display_time_format		    '+%d-%m-%Y %H:%M'
+#
+## Default theme Color Values
+set theme_primary                                   263f7c
+set theme_secondary                                 DFC6BF
+set theme_primary_variant                           AB2B83
+set theme_secondary_variant                         59D379
+set theme_hilight                                   A06D5A
+set -g theme_color_user                             $theme_hilight
+set -g theme_color_host                             $theme_primary_variant
+set -g theme_color_separator                        brblack
+set -g theme_color_normal                           normal
+set -g theme_color_time                             $theme_secondary_variant
+set -g theme_color_path                             $theme_primary
+set -g theme_color_prompt                           $theme_secondary_variant
+set -g theme_color_virtualenv                       $theme_secondary
+set -g theme_color_status_prefix                    $theme_hilight
+set -g theme_color_status_jobs                      $theme_primary
+set -g theme_color_status_rw                        $theme_primary
+set -g theme_display_group                          no
+set -g theme_prompt_segment_separator_color         $theme_primary
+set -g theme_prompt_userhost_separator              '.'
+set -g __fish_git_prompt_char_branch_begin          '['
+set -g __fish_git_prompt_char_branch_end            ']'
+set -g __fish_git_prompt_color_branch_begin         brblack
+set -g __fish_git_prompt_color_branch_end           brblack
+set -g __fish_git_prompt_color_branch               $theme_secondary
+
+set -gx fish_prompt_pwd_dir_length                  1
+set -g theme_display_jobs_always                    yes
+#
+
 
 # Colors
 # TODO: consider displaying colors in the following order: cyan, green, yellow, orange, purple
