@@ -1,3 +1,7 @@
+# DISCLAIMER
+I use this Fork for my own Nix Config as I currently have not found a better way to change the theme data.
+I do not own this code nor Am I responsible for what happens if you use it-
+
 # kawasaki
 
 `kawasaki` is a customizable [fish][fish] theme that emphasizes a simple and useful prompt without useless cluttter.
